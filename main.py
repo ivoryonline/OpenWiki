@@ -4,7 +4,7 @@ from urllib.parse import parse_qs
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import uuid
 
-wiki_wiki = wikipediaapi.Wikipedia(user_agent="OpenWiki (" +  uuid.uuid4() + ")", language="en", extract_format=wikipediaapi.ExtractFormat.HTML)
+wiki_wiki = wikipediaapi.Wikipedia(user_agent="OpenWiki (" +  str(uuid.uuid4()) + ")", language="en", extract_format=wikipediaapi.ExtractFormat.HTML)
 
 with open("search.html", "r") as file:
     index = file.read().encode("utf-8")
@@ -77,4 +77,5 @@ class handler(BaseHTTPRequestHandler):
 
 server_address = ("127.0.0.1", 9827)
 httpd = ThreadingHTTPServer(server_address, handler)
+
 httpd.serve_forever()
