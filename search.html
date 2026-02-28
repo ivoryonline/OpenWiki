@@ -1,0 +1,102 @@
+<!doctype html>
+<html style="color-scheme:dark">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@font-face {
+font-family: Rubik;
+font-style: normal;
+font-weight: 300 900;
+src: url(rubik.woff2) format(woff2)
+}
+
+body {
+background-color: #121212;
+opacity: 0.9;
+padding: 60px;
+font-family: Rubik;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+padding: 0;
+margin: 0 auto;
+}
+
+button {
+padding-left: 30px;
+padding-right: 30px;
+height: 60px;
+width: auto;
+border: none;
+border-radius: 20px;
+font-size: 1.5rem;
+font-family: Rubik;
+background-color: #4b6675;
+color: lightblue;
+transition: 0.2s ease;
+cursor: pointer
+}
+
+button:hover {
+filter: brightness(0.9)
+}
+
+button:active {
+filter: brightness(1.05);
+border-radius: 28px
+}
+
+input {
+background-color: #202020;
+border: none;
+border-radius: 30px;
+height: 60px;
+width: 100%;
+transition: 0.2s ease;
+outline: none;
+color: lightblue;
+font-family: Rubik;
+font-size: 2rem;
+padding-left: 15px;
+margin-bottom: 15px;
+box-sizing: border-box
+}
+
+input:focus {
+background-color: #303030;
+border-radius: 15px
+}
+
+@media (max-width: 800px) {
+body {
+align-items: flex-start
+}
+button {
+display: none
+}
+.main {
+width:90% !important;
+margin: 0 auto;
+margin-top:50px
+}
+}
+</style>
+</head>
+<body>
+<div style="width:700px" class="main">
+<center>
+<h1 style="font-size:7rem;margin:0;margin-bottom:25px">+_+</h1>
+</center>
+<form method="POST">
+<input type="text" autofocus required name="q">
+<center>
+<button style="margin-right:10px" type="submit">Crow Search</button>
+<button disabled>Donate</button>
+</center>
+</form>
+</div>
+<div>
+</div>
+</body>
+</html>
